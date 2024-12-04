@@ -1,0 +1,14 @@
+Installing virtualenv
+pip install virtualenv
+
+Test your installation
+virtualenv --version
+
+create a virtualenv 
+virtualenv venv
+
+activate it
+venv\Scripts\activate
+
+deactivate the virtual environment
+deactivate
