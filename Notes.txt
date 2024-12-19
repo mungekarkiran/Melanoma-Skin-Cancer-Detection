@@ -4,6 +4,10 @@ https://www.kaggle.com/datasets/fatemehmehrparvar/skin-cancer-detection
 https://www.kaggle.com/datasets/jaiahuja/skin-cancer-detection
 https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images/data
 
+Notebook:
+https://www.kaggle.com/search?q=Skin+Cancer+Detection+in%3Adatasets+in%3Anotebooks
+https://github.com/kshitij-raj/Melanoma-Skin-Cancer-Detection/blob/main/Melanoma_SkinCancer_Detection.ipynb
+
 
 Paper Links:
 https://www.irjet.net/archives/V10/i12/IRJET-V10I1262.pdf
@@ -11,3 +15,7 @@ https://link.springer.com/article/10.1007/s11042-024-19864-8
 https://pdf.sciencedirectassets.com/280203/1-s2.0-S1877050924X00058/1-s2.0-S1877050924009438/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDAaCXVzLWVhc3QtMSJGMEQCIHfAeu6Cy9wzs5mfwJ0t6TzFVbzyEDFPi2MZVewvwLPNAiBEnCdHKu9A3QT%2BY9xS%2BarlwHh7q7pxjROEK7pryQ0kqSq7BQjZ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMy9gH3ghnzcGqXnuZKo8FB6nM0T3oYcNKVscrzLdesLXxG5TzI1eClxtRfX2puDh8PhKEe3fgIozwo%2BQCF2%2FM%2Bzrkp2cVmSrURYsWOusjXLekuN4aMU3x31OT1VZrBiIdlWRbFZPSSCsKgAbQ6qUdx6NY8eVBab0sqypmxoUuTkDV9kjybz3%2BAqMIQQ%2FO7D3fGsWYCazFfZXrYAAl13IQvvpaSW0AueQODZ1BC7KNFaTwc8nHrY%2Fau9Y1dM8bAWyL3QXJFB%2BSonQt7oDmpLiGD%2BtLzXYu0sR48pL7sHO2W6pT0gpCNebIbXNVk1OwXqUs5egnIyLyl1uCHwzawSArjvtmoA%2Fm4zkGt1u1kdL5PSxfVplUCYGaje595XbxbFmVPpuKeOf395uuZ72Md7q%2B8uLjgpSIkn1AeijUx1MPx2d0%2F%2BN6LGeYy52jTMd1uckXcVagntbUclJj8igdsl3f6RJxxBmbZ%2Fg9WIYamIVLc5Rs4mXBVmNCI4dqUZu27ZVpS8AJhk%2F%2FhL6V9cq8yA7i8ChfgWt%2Fdd9zYlXayj%2FFPWNh%2Bk7gu99qW9p8jqpLrFzHyM%2FcX4G63q7kYiEZAw%2F3loALEDnrdM4x4w4MpX2Og5M2b9ESeUau4dun4a%2FryfKrP5kd38FOLCx%2BcA%2FzDv383rHNunD3Fy1cOezuTatscDN2zyBqxh7UQThfPs4jVvOVhgYEPZG%2F8Nz3Mamt7FtxW1rQZEJthBiuvP0NRCgTnQ36%2BQu7TAwsCPFhbzMtHcHSYr7cmSkDZPI6PiA0vAZhFv5uXuBWRqU%2B97TwGh%2BgG5sbyfJIMBqmG7lovxWlaROZ1cttrcU0veT0kZ%2FwU5aogCmvma5IltjPZN0IW%2BUYM9iC2%2Fx2dFJewoX146LDgDDRzLy6BjqyAVTMNs6A1sDZKPOEqh7%2B4or7lR5Bbx0EY5NZqhhWo%2BmvA%2FOI3ilYSEDAkJalqZ2F5VzLWkeYDu5OiLao0cJQoeSp3BbbZb9UK3PR0zlFq%2FSwTKcztrvQJSqZ3PxLVRqsxXodybmsHbXEjVxO71NYzow6%2F%2FgV0Ismo5vlOSeUUO6Ae1iSVK1a4HrG3XUpyJUfAdxXdP8U2iU%2BFeoJD1Q8aj5IVhOJ2wEp630qSNq93XRaQO4%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241203T162029Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY4PZAF6ZA%2F20241203%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c867b0e84088baeabb1f45a2ce21048ae35981f22bc5af1ff3abfeb049759e13&hash=2fc746f0d39ff0fe1f0d6b7e1a54a72b3f2f0e6aab649a547052e488c3809da7&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1877050924009438&tid=spdf-f703b154-2fa6-48ba-9131-a782fd34ef6f&sid=b9ca4c1a6f34b5415f0861722519bcabfaefgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f0e5e0105560a575552&rr=8ec4e2611a0f3b39&cc=in
 https://pmc.ncbi.nlm.nih.gov/articles/PMC10649387/
 
+
+Youtube:
+Python Image Processing - Skin Cancer Detection using Deep Learning - ClickMyProject
+https://www.youtube.com/watch?v=R_DM1fS7wtA&list=PLMUXzx2H4mopUDVHMm90ticpwfMdzw9iw&index=8
