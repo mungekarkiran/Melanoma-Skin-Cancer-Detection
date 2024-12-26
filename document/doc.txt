@@ -10,6 +10,8 @@ Comparative Study of AI Techniques for Early Detection of Melanoma Skin Cancer
 
 Performance Evaluation of Deep Learning Architectures for Melanoma Skin Cancer Diagnosis
 
+Comparative Study of Deep Learning-Based System for Early Detection and Classification of Melanoma Skin Cancer
+
 
 Abstract:
 
@@ -133,3 +135,83 @@ Step: Model Evaluation
 The evaluation of models in this study was conducted using a comprehensive set of metrics to ensure a robust assessment of their performance. Accuracy and loss were used as primary metrics during training and validation to monitor overall classification performance and the optimization process. Precision and recall, critical for imbalanced datasets like melanoma detection, were calculated to evaluate the ability of the model to correctly classify malignant cases (true positives) and minimize false negatives. F1-score, the harmonic mean of precision and recall, provided a balanced view of model performance, particularly for cases where misclassification could lead to severe consequences in clinical settings.
 
 In addition to these metrics, Cohen’s Kappa statistic was employed to assess the level of agreement between the predicted and actual labels, accounting for the possibility of random chance. This metric is particularly valuable in medical image classification, where even small discrepancies can impact decision-making. Together, these metrics provided a holistic understanding of the model's effectiveness, enabling an objective comparison between raw and preprocessed datasets as well as among the five transfer learning architectures used in this study.
+
+----------------------------
+
+Links:
+https://www.irjet.net/archives/V10/i12/IRJET-V10I1262.pdf
+https://link.springer.com/article/10.1007/s11042-024-19864-8
+https://hal.science/hal-03172718/document
+
+
+Title: Comparative Study of Deep Learning-Based System for Early Detection and Classification of Melanoma Skin Cancer
+
+
+I am implimented a project call Comparative Study of Deep Learning-Based System for Early Detection and Classification of Melanoma Skin Cancer. For this I used melanoma_cancer_dataset from kaggle. This dataset will be useful for developing the deep learning models for accurate classification of melanoma. Dataset consists of 9600 images for training the model and 1000 images for evaluation of model. In this dataset we have 2 classes namely benign and malignant and it splited in the balanced way into train, val, and test file. After data collection we do some data preprocessing like Resized to 224×224 pixels, Converted to grayscale version of the image, Noise reduction using block-matching 3D (BM3D) filtering, Binary mass lesion image and Binary lesion mask formed by thresholding, Segmentation using binary lesion masks and morphological operations, Generation of masked ROI showing only the masked area of the image and inverse-masked images showing everything except the masked area, Canny edge-detected image. Keep two separate dataset called raw and preprocessed dataset, both are used to train the deep learning / transfer learning model like VGG16, MobileNet, DenseNet, ResNet50, InceptionV3. I train all models for 100 epoch and monitor the accuracy, loss, val_accuracy, and val_loss; also evaliate each model using accuracy, loss, Cohen’s Kappa, precision, recall, f1 score, and confusion matrics. At the end I used the best model for deployment. For deployment I used strimlite, where I used to get image as input do the preprocessing on that image and used model to predict the output, also show the preprocessed images on page. Now act as a researcher write Abstract of 200 words for the above topic and also follow the IEEE guidelines.
+
+Abstract:
+Melanoma is a life-threatening form of skin cancer, and its early detection is critical for improving survival rates. This study presents a comparative analysis of deep learning-based systems for the early detection and classification of melanoma skin cancer. The study utilizes a publicly available melanoma cancer dataset from Kaggle, which comprises 9,600 training images and 1,000 evaluation images evenly split into benign and malignant classes. The pre-processed datasets are used to train transfer learning models, including VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3. Model performance is evaluated using metrics such as accuracy, loss, cohen's kappa, precision, recall, f1 score, and confusion matrices. The best-performing model is deployed using Streamlit, enabling user interaction via an input image, on-the-fly pre-processing, and real-time classification. The results demonstrate that the proposed system outperforms existing methods, offering an effective and scalable solution for melanoma detection.
+
+Key Words: Melanoma detection, Transfer learning, Deep learning, Image Processing, VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3
+
+
+1. INTRODUCTION
+
+The global incidence of melanoma has been increasing steadily, necessitating the development of reliable diagnostic tools. Early detection can significantly reduce mortality rates. Traditional diagnostic methods rely on dermatological expertise, which is both time-consuming and subject to human error. Recent advancements in artificial intelligence, particularly deep learning, have enabled the automation of skin cancer detection with high accuracy. This study aims to explore and compare the performance of existing deep learning models while proposing an optimized system for melanoma detection and classification.
+
+
+Skin cancer is one of the most common forms of cancer worldwide, with melanoma being the deadliest subtype due to its aggressive nature and high metastasis potential. Early detection and classification of melanoma significantly improve the chances of successful treatment and patient survival. Recent advancements in artificial intelligence (AI) and deep learning have demonstrated the potential to enhance medical image analysis, offering robust solutions for automated disease detection.
+Convolutional Neural Networks (CNNs) have become the cornerstone for image classification tasks due to their ability to learn spatial hierarchies. Transfer learning, leveraging pre-trained deep learning models such as VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3, has emerged as a prominent approach for medical imaging tasks, especially when labeled data is limited. This research focuses on building an automated system that compares the performance of various transfer learning models on raw and preprocessed melanoma skin cancer images to provide insights into optimal methodologies for clinical application.
+
+
+2. LITERATURE REVIEW
+
+
+3. PROPOSED METHODOLOGY
+3.1 Problem Formulation
+
+
+
+3.2 Problem Definition
+
+
+
+3.3 Scope
+
+
+
+3.4 Proposed Methodology
+
+
+
+3.5 Proposed Algorithm
+
+
+
+3.6 Features of Proposed System
+
+
+
+4. SYSTEM ANALYSIS
+4.1 Functional Requirements
+
+
+
+4.2 Non-Functional Requirements
+
+
+
+5. RESULTS
+
+
+
+6. CONCLUSION
+
+
+
+REFERENCES
+
+
+
+
+
