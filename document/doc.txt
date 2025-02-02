@@ -164,10 +164,125 @@ Skin cancer is one of the most common forms of cancer worldwide, with melanoma b
 Convolutional Neural Networks (CNNs) have become the cornerstone for image classification tasks due to their ability to learn spatial hierarchies. Transfer learning, leveraging pre-trained deep learning models such as VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3, has emerged as a prominent approach for medical imaging tasks, especially when labeled data is limited. This research focuses on building an automated system that compares the performance of various transfer learning models on raw and preprocessed melanoma skin cancer images to provide insights into optimal methodologies for clinical application.
 
 
-2. LITERATURE REVIEW
+#### INTRODUCTION
+
+Skin cancer is one of the most prevalent forms of cancer worldwide, with melanoma being its most aggressive and life-threatening type. Unlike other forms of skin cancer, melanoma has a higher potential for metastasis, leading to severe health consequences if not detected early. According to the World Health Organization (WHO), over 300,000 new melanoma cases are diagnosed annually, with an increasing trend in incidence rates globally. Early diagnosis and treatment are critical to improving survival rates; however, traditional diagnostic methods often rely on subjective interpretation by dermatologists, which can lead to variability in results.
+
+Advancements in medical imaging and artificial intelligence (AI) have introduced new paradigms in the detection and classification of skin cancer. Deep learning, a subset of AI, has emerged as a revolutionary technology, demonstrating exceptional performance in various image-based medical diagnostics. Convolutional Neural Networks (CNNs), a specialized type of deep learning architecture, have shown particular promise in analyzing dermoscopic images for melanoma detection. By learning features directly from raw images, CNNs eliminate the need for manual feature extraction, enabling more efficient and accurate diagnostic processes.
+
+Despite the progress in deep learning applications, several challenges persist in the domain of melanoma detection. The datasets used for training often exhibit variations in image quality, lighting, and skin tones further complicate the detection process. Addressing these challenges requires robust preprocessing techniques, augmentation strategies, and optimized model architectures to improve the generalizability and reliability of the detection system.
+
+Another critical aspect is the interpretability of deep learning models in medical applications. Clinicians need to understand the basis of a model’s predictions to trust its recommendations. Techniques such as Gradient-weighted Class Activation Mapping (Grad-CAM) have been employed to provide visual explanations of model decisions, highlighting regions of interest in the dermoscopic images. Such interpretability not only increases the acceptance of AI-based tools in clinical settings but also enhances the collaboration between clinicians and AI systems.
+
+```
+Another critical aspect is the interpretability of deep learning models in medical applications. Clinicians need to understand the basis of a model’s predictions to trust its recommendations. Techniques such as highlighting regions of interest in the dermoscopic images and have been employed to provide visual explanations of model decisions. Such interpretability not only increases the acceptance of AI-based tools in clinical settings but also enhances the collaboration between clinicians and AI systems.
+```
+
+This study aims to perform a comprehensive comparative analysis of state-of-the-art deep learning-based systems for melanoma detection and classification. It evaluates existing models' performance metrics, including accuracy, loss, cohen's kappa, precision, recall, f1 score, and confusion matrices, to identify gaps and areas for improvement. Furthermore, the study proposes an optimized approach that integrates transfer learning, ensemble methods, and advanced preprocessing techniques to address the limitations of current systems.
+
+The ultimate objective of this research is to develop a robust, reliable, and interpretable system that can assist dermatologists in diagnosing melanoma at an early stage. By leveraging the strengths of deep learning and addressing its challenges, the proposed system has the potential to significantly reduce diagnostic errors, improve patient outcomes, and advance the integration of AI in healthcare. Through this study, we hope to contribute to the ongoing efforts in combating melanoma and enhancing the quality of dermatological care.
+
+
+2. LITERATURE REVIEW / RELATED WORK
 
 
 3. PROPOSED METHODOLOGY
+
+write Proposed Methodology for nine paregraph including Overview, Data Description and Preprocessing, project Workflow, Detailed Steps of Model Selection and Training and Testing, Parameter tuning strategies, evaluation metrics like accuracy, loss, cohen's kappa, precision, recall, f1 score, and confusion matrices, Comparison and Validation.
+
+
+
+### Proposed Methodology
+
+The proposed methodology leverages advanced deep learning techniques for the early detection and classification of melanoma skin cancer. It integrates data preprocessing, model selection, parameter tuning, and comprehensive performance evaluation to achieve optimal results. A combination of transfer learning and ensemble modeling is employed to enhance the system's robustness and accuracy. The methodology is structured to address challenges like class imbalance, variability in dermoscopic images, and the need for interpretability, ensuring clinical applicability.
+
+The dataset used for this study consists of labeled dermoscopic images, sourced from public datasets like ISIC 2020 or HAM10000. These datasets contain images of melanoma and benign lesions, along with metadata such as lesion location and patient age. Data preprocessing includes resizing images to 224x224 pixels, normalizing pixel values to a range of 0-1, and applying augmentation techniques like rotation, flipping, and zooming to increase diversity. Class imbalance is addressed through weighted loss functions or techniques like SMOTE, ensuring the model is not biased toward the majority class.
+
+The project workflow begins with data acquisition, followed by preprocessing to standardize the dataset. Pre-trained CNN architectures like ResNet50, DenseNet121, and EfficientNet are selected for feature extraction and classification. These models are fine-tuned to adapt to the specific requirements of melanoma detection. The dataset is split into training, validation, and testing subsets to facilitate model development and evaluation. An ensemble technique aggregates predictions from top-performing models to enhance overall accuracy and reduce model-specific biases.
+
+Model training involves freezing the initial layers of pre-trained architectures to retain general features while fine-tuning later layers for task-specific learning. The categorical cross-entropy loss function and Adam optimizer are used to train the models. Early stopping prevents overfitting by halting training when validation performance ceases to improve. Testing evaluates the trained models on unseen data, analyzing their classification accuracy and robustness. The ensemble approach combines the strengths of individual models, delivering a more reliable prediction system.
+
+Hyperparameter tuning is critical for optimizing model performance. Techniques such as grid search and random search are employed to find the best combination of parameters, including learning rate, batch size, dropout rates, and the number of fine-tuned layers. A learning rate scheduler dynamically adjusts the learning rate during training to improve convergence. These strategies ensure that the models achieve the best possible performance without overfitting or underfitting.
+
+The evaluation of the proposed system involves metrics like accuracy, cross-entropy loss, Cohen's kappa, precision, recall, F1-score, and confusion matrices. Accuracy measures the proportion of correctly classified instances, while loss quantifies the model's performance during training. Cohen's kappa accounts for random agreement, and the precision-recall-F1 trio provides a balanced assessment, particularly for imbalanced datasets. Confusion matrices offer detailed insights into classification performance, highlighting areas for improvement.
+
+Comparison and validation are conducted to benchmark the proposed system against existing methods. Performance metrics from pre-trained models are compared with the ensemble model to demonstrate its superiority. k-fold cross-validation ensures that the results are generalizable and not influenced by specific data splits. The ensemble model consistently outperforms individual models, confirming its effectiveness in improving robustness and accuracy.
+
+This methodology provides a structured approach for developing a reliable, interpretable, and clinically applicable system for melanoma detection. By integrating preprocessing, transfer learning, ensemble techniques, and rigorous evaluation metrics, the proposed system addresses key challenges in skin cancer diagnosis. Its robust performance and interpretability make it a valuable tool for assisting clinicians in early melanoma detection.
+
+The comprehensive nature of the methodology ensures that the proposed system is not only effective but also adaptable to different clinical settings and datasets. Future work may include real-world deployment and further enhancements to accommodate a wider variety of skin conditions, broadening its applicability in dermatological care.
+
+
+-----
+
+The proposed research focuses on developing an advanced deep learning-based system for the early detection and classification of melanoma skin cancer. Melanoma, a highly aggressive form of skin cancer, requires prompt and accurate diagnosis to improve patient outcomes. This study aims to address critical challenges in melanoma detection, including variability in dermoscopic images, image preprocessing, and the need for reliable interpretability. By leveraging state-of-the-art transfer learning techniques, the methodology aims to create a robust and clinically applicable diagnostic tool. The system incorporates preprocessing steps, optimized model architectures, and advanced evaluation metrics to ensure high performance and generalizability across diverse datasets.
+
+The approach begins with data preprocessing, where dermoscopic images are Resized to 224×224 pixels, Converted to grayscale version of the image, Noise reduction using block-matching 3D (BM3D) filtering, Binary mass lesion image and Binary lesion mask formed by thresholding, Segmentation using binary lesion masks and morphological operations, Generation of masked ROI showing only the masked area of the image and inverse-masked images showing everything except the masked area, Canny edge-detected image to enhance model training.  
+
+->
+write explaination and formulas for each pre-processing step "Canny edge-detected image", also maintion how it is usefull to enhance model training in two paregraph only
+
+
+Transfer learning based pre-trained architectures require input images of a fixed size. Resizing all images to 224x224 pixels ensures uniformity in input dimensions, which is crucial for batch processing during training and inference. This step also reduces computational complexity by downsizing high-resolution images while retaining essential features.
+
+FORMULA
+
+
+Dermoscopic images are often in RGB format, containing redundant color information. For melanoma detection, intensity variations and texture patterns are more significant than color. Converting RGB images to grayscale reduces the data to a single channel, retaining only the luminance (intensity) values. This simplifies the model's input without compromising the essential information required for lesion analysis.
+
+FORMULA
+
+
+These preprocessing steps significantly enhance model training by ensuring uniformity, efficiency, and improved generalization. Resizing images to a consistent size provides uniform input dimensions, facilitating smooth batch processing and reducing variance caused by varying image sizes. The conversion to grayscale simplifies the feature space by reducing the complexity of input data while retaining critical information necessary for lesion detection. Together, these steps optimize the dataset for deep learning by minimizing memory requirements and speeding up computations. Moreover, standardized and simplified inputs enable the model to concentrate on meaningful patterns, improving its ability to generalize effectively to unseen data and enhancing overall performance.
+
+Block-Matching 3D (BM3D) filtering is a state-of-the-art technique for noise reduction that enhances image quality by grouping similar image patches into 3D blocks and collaboratively filtering them. This method operates in two stages: basic and final denoising. In the basic step, noisy patches are grouped based on similarity and transformed using a 3D Discrete Cosine Transform (DCT). Thresholding is applied to suppress noise, and the inverse transform reconstructs denoised patches. In the final step, further refinement is performed by aggregating information from overlapping blocks.
+
+FORMULA
+
+
+BM3D filtering is crucial for enhancing model training by removing noise while preserving essential image structures, such as lesion boundaries. This denoising ensures that the input images are free from random variations or artifacts that could mislead the model. By focusing on clean, high-quality features, BM3D filtering improves the model's ability to identify patterns relevant to melanoma detection, such as texture and shape. Additionally, the reduced noise results in more consistent feature representations, enabling better learning, faster convergence, and improved generalization on unseen data.
+
+Binary mass lesion images and lesion masks are created by thresholding the original image to distinguish the lesion area from the background. The thresholding process converts grayscale pixel values into binary values (0 or 1) based on a set threshold. If a pixel's intensity exceeds the threshold, it is considered part of the lesion (foreground), and if it is below the threshold, it is part of the background. This results in a binary mass lesion image that highlights the lesion area, while the binary lesion mask serves as a template for extracting or focusing on the lesion in subsequent processing steps. The process can be mathematically expressed as:
+
+FORMULA
+
+
+The creation of binary mass lesion images and lesion masks enhances model training by simplifying the input data, isolating the lesion from the surrounding skin. This focused region of interest (ROI) reduces the model's need to process irrelevant background information, enabling it to learn more effectively from the lesion's structural and textural features. By reducing complexity and emphasizing the target areas, these binary images improve segmentation accuracy and help the model learn relevant patterns more efficiently. This leads to better generalization, faster convergence during training, and improved performance in detecting melanoma.
+
+Segmentation using binary lesion masks involves isolating the region of interest (ROI) the lesion area from the rest of the image using a binary mask. The binary lesion mask highlights the lesion in white (value 1) and the background in black (value 0). Morphological operations, such as dilation, erosion, opening, and closing, are applied to refine the segmentation by removing small noise or filling gaps in the lesion area. These operations use a structuring element to manipulate the binary image and improve the quality of the segmented lesion. The dilation and erosion formulas for morphological operations are as follows:
+
+FORMULA
+
+
+Segmentation with binary lesion masks and morphological operations enhances model training by ensuring that only the lesion area is considered for further analysis, eliminating any irrelevant background information. This precise segmentation allows the model to focus on critical features, such as shape, texture, and boundaries of the lesion, improving its ability to distinguish between melanoma and non-melanoma lesions. The morphological operations help refine the mask, removing small artifacts and inconsistencies that could confuse the model. By providing cleaner, more accurate input data, the model can learn more effectively, leading to improved segmentation performance and better overall accuracy in melanoma detection.
+
+The generation of masked Region of Interest (ROI) and inverse-masked images involves applying the binary lesion mask to isolate and highlight the lesion area, as well as to create an inverse mask that removes the lesion. The masked ROI keeps only the lesion area and sets all non-lesion regions to black (value 0). The inverse-masked image, on the other hand, keeps the non-lesion areas and sets the lesion region to black. The formula for masking and inverse-masking can be expressed as:
+
+FORMULA
+
+
+The generation of masked ROI and inverse-masked images enhances model training by providing two types of data: one focused solely on the lesion area (masked ROI) and the other on the surrounding background (inverse-masked image). This dual approach helps the model learn to recognize both the presence of the lesion and distinguish it from the background. The isolated lesion in the masked ROI allows the model to focus on the relevant features, improving classification accuracy. In contrast, the inverse-masked image can be used to emphasize background features, improving the model’s ability to differentiate between the lesion and non-lesion regions, ultimately leading to more accurate and robust melanoma detection.
+
+The Canny edge detection algorithm is used to highlight the edges within an image, which is particularly useful for identifying the boundaries of lesions. The algorithm works by applying a series of steps: blurring the image with a Gaussian filter to reduce noise, calculating the gradient magnitude and direction to detect edges, applying non-maximum suppression to thin the edges, and finally performing edge tracking by hysteresis to retain strong edges and discard weak ones. The mathematical representation of the gradient magnitude is:
+
+FORMULA
+
+
+Canny edge detection enhances model training by emphasizing the boundaries of the lesions, which are often critical for accurate classification. By focusing on edge features, the model can better differentiate between lesion and non-lesion areas, especially in cases where texture or intensity differences are subtle. This pre-processing step helps the model learn key structural features, such as the shape and contours of melanoma lesions, improving its ability to make accurate predictions. Additionally, edge-detection reduces the complexity of the image by focusing on significant features, thus enabling the model to more effectively identify and classify lesions.
+
+
+Pre-trained transfer learning networks such as VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3 are fine-tuned for melanoma classification, allowing the system to leverage the feature extraction capabilities of these architectures. An ensemble modeling technique aggregates predictions from multiple models to improve robustness and accuracy. The proposed methodology also integrates advanced evaluation metrics, including accuracy, F1-score, Cohen’s kappa, and confusion matrices, to comprehensively assess the system's performance. This holistic approach ensures that the proposed system is not only accurate but also interpretable, providing clinicians with visual cues through Grad-CAM heatmaps to build trust in AI-assisted diagnosis.
+
+After prepares the important features like lesion boundaries and ROI are extracted. The data moves to Model Selection and Training, where transfer learning models like VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3 are fine-tuned for melanoma classification, and trained using the raw and pre-processed images. 
+
+
+Once the image pre-processing prepares the dataset by enhancing and isolating important features, such as lesion boundaries and the region of interest (ROI), the next step involves Model Selection and Training. Here, advanced transfer learning models, including VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3, are used for melanoma classification. These pre-trained models are fine-tuned to adapt to the specific characteristics of the melanoma dataset. Fine-tuning involves adjusting the pre-trained models weights to learn domain-specific features while retaining generalizable patterns learned during pre-training. Both raw and pre-processed images are used to train these models, allowing the comparison of performance between datasets as shown in Fig.. This approach leverages the models powerful feature extraction capabilities, ensuring accurate detection and classification of melanoma lesions by focusing on structural, textural, and boundary details essential for distinguishing between malignant and benign cases.
+
+
+
+The evaluation of transfer learning models was conducted using both raw and pre-processed datasets, focusing on metrics like accuracy, loss, Cohen’s kappa, precision, recall, and F1-score. From the raw dataset, DenseNet achieved the highest accuracy (90.98%), followed closely by MobileNet (89.31%). However, when utilizing the pre-processed dataset, all models showed a significant improvement in performance. MobileNet emerged as the best-performing model with the pre-processed dataset, achieving an accuracy of 91.95%, the lowest loss of 8.05%, and the highest Cohen's kappa score of 83.86%. This indicates superior agreement between predicted and actual classifications. Additionally, MobileNet attained precision, recall, and F1 scores of 92, highlighting its robustness in melanoma classification. The consistent improvement across all metrics demonstrates that pre-processing enhances the model's ability to capture meaningful patterns, with MobileNet proving to be the most reliable and effective model for the given task.
+
+
 3.1 Problem Formulation
 
 
@@ -214,4 +329,111 @@ REFERENCES
 
 
 
+
+4. EXPERIMENTS AND RESULTS
+
+The experimental results demonstrated significant improvements in model performance when pre-processed datasets were utilized. Among the five transfer learning models evaluated—VGG16, MobileNet, DenseNet, ResNet50, and InceptionV3 - MobileNet emerged as the most effective, achieving the highest accuracy of 91.95%, the lowest loss of 8.05%, and the highest Cohen's kappa score of 83.86% on the pre-processed dataset. These metrics indicate MobileNet’s superior ability to classify melanoma lesions accurately and its robustness in handling the intricacies of dermoscopic data. The results also highlighted the importance of pre-processing, as all models exhibited substantial improvement in precision, recall, and F1-score, with MobileNet achieving values of 92% across these metrics, underscoring its consistent performance.
+
+The comparison between raw and pre-processed datasets revealed the critical role of pre-processing in enhancing model efficacy. While DenseNet showed strong performance on the raw dataset with an accuracy of 90.98%, MobileNet surpassed it with pre-processed data, demonstrating the effectiveness of leveraging edge detection, lesion segmentation, and ROI masking for feature enhancement. These steps reduced noise and background distractions, enabling the models to focus on relevant lesion features. The improved metrics also validated the hypothesis that carefully curated and pre-processed data can significantly enhance model generalization and predictive capabilities.
+
+To deploy the trained models, Streamlit was utilized to create a user-friendly application for real-time melanoma detection. The application enables users to upload dermoscopic images, which are immediately pre-processed using the established pipeline. MobileNet, as the best-performing model, is then used to classify the lesions as benign or malignant. The deployment not only provides predictions but also includes detailed visualizations of the pre-processed images, such as masked ROI and edge-detected versions. This functionality helps clinicians and researchers better understand the features influencing the model’s predictions.
+
+The deployment using Streamlit ensures that the solution is both accessible and scalable, making it suitable for integration into clinical workflows. Its lightweight architecture supports deployment on cloud platforms, allowing for widespread use without the need for complex infrastructure. The combination of cutting-edge machine learning techniques and an intuitive interface demonstrates the potential of AI in healthcare, offering a reliable and efficient tool for early melanoma detection and diagnosis. This seamless transition from research to application underscores the practical significance of the study, bridging the gap between computational advancements and real-world medical challenges.
+
+5. CONCLUSION
+
+This study presented a comprehensive approach to melanoma skin cancer detection using advanced transfer learning models combined with a robust data pre-processing. By enhancing the dataset through methods such as resizing, grayscale conversion, noise reduction, and lesion masking, the models achieved improved performance, with MobileNet emerging as the most effective model. It achieved the highest accuracy of 91.95% and demonstrated superior generalization across all evaluation metrics. The integration of these techniques highlights the importance of data preparation and model selection in achieving reliable and accurate diagnostic systems for critical healthcare applications. Furthermore, the deployment of the trained model using Streamlit showcased its practical usability, providing a user-friendly, real-time detection tool for clinicians and researchers.  
+
+The proposed framework lays the foundation for further advancements in AI-driven melanoma detection systems. Future work could explore the integration of larger and more diverse datasets to improve model robustness and generalizability across various demographic and clinical conditions. Additionally, incorporating multi-modal data, such as patient history and genetic information, could enhance the system's diagnostic accuracy. The development of explainable AI (XAI) techniques to provide insights into the model’s decision-making process would further increase its trustworthiness in clinical settings. Finally, extending the deployment to mobile and cloud-based platforms can make this technology accessible to remote and underserved regions, amplifying its impact on global healthcare challenges.
+
+
+
+
+
+
+[1] Qaisar Abbas, M Emre Celebi, and Irene Fondon Garc ´ ´ıa. Hair removal
+methods: a comparative study for dermoscopy images. Biomedical
+Signal Processing and Control, 6(4):395–404, 2011.
+[2] Giuseppe Argenziano, Caterina Longo, A Cameron, S Cavicchini, J-Y
+Gourhant, A Lallas, I McColl, C Rosendahl, L Thomas, D TiodorovicZivkovic, et al. Blue-black rule: a simple dermoscopic clue to recognize pigmented nodular melanoma. British Journal of Dermatology,
+165(6):1251–1255, 2011.
+[3] Samy Bakheet. An svm framework for malignant melanoma detection
+based on optimized hog features. Computation, 5(1):4, 2017.
+[4] D Ballabio, R Todeschini, and V Consonni. Recent advances in highlevel fusion methods to classify multiple analytical chemical data. In
+Data Handling in Science and Technology, volume 31, pages 129–155.
+Elsevier, 2019.
+[5] Tony F Chan and Luminita A Vese. Active contours without edges.
+IEEE Transactions on image processing, 10(2):266–277, 2001.
+[6] Fekrache Dalila, Ameur Zohra, Kasmi Reda, and Cherifi Hocine. Segmentation and classification of melanoma and benign skin lesions. Optik,
+140:749–761, 2017.
+[7] Florentia Dimitriou, Regina Krattinger, Egle Ramelyte, Marjam J
+Barysch, Sara Micaletto, Reinhard Dummer, and Simone M Goldinger.
+The world of melanoma: epidemiologic, genetic, and anatomic differences of melanoma across the globe. Current oncology reports,
+20(11):87, 2018.
+[8] Diwakar Gautam and Mushtaq Ahmed. Melanoma detection and
+classification using svm based decision support system. In 2015 Annual
+IEEE India Conference (INDICON), pages 1–6. IEEE, 2015.
+[9] Tsong-Long Hwang, Woan-Ruoh Lee, Shu-Chiou Hua, and Jia-You
+Fang. Cisplatin encapsulated in phosphatidylethanolamine liposomes
+enhances the in vitro cytotoxicity and in vivo intratumor drug accumulation against melanomas. Journal of dermatological science, 46(1):11–
+20, 2007.
+[10] Ashwin R Jadhav, Arun G Ghontale, and Vimal K Shrivastava. Segmentation and border detection of melanoma lesions using convolutional
+neural network and svm. In Computational Intelligence: Theories,
+Applications and Future Directions-Volume I, pages 97–108. Springer,
+2019.
+[11] Uzma Jamil, Asma Sajid, Majid Hussain, Omer Aldabbas, Afshan Alam,
+and M Umair Shafiq. Melanoma segmentation using bio-medical image
+analysis for smarter mobile healthcare. Journal of Ambient Intelligence
+and Humanized Computing, 10(10):4099–4120, 2019.
+[12] JC Kavitha, A Suruliandi, D Nagarajan, and T Nadu. Melanoma
+detection in dermoscopic images using global and local feature extraction. International Journal of Multimedia and Ubiquitous Engineering,
+12(5):19–28, 2017
+
+
+
+
+
+
+
+
+
+
+----
+
+paper links:
+https://www.google.com/search?q=melanoma+skin+cancer+detection+using+deep+learning+pdf&oq=Melanoma+Skin+Cancer+Detection&gs_lcrp=EgZjaHJvbWUqBggCECMYJzIJCAAQRRg5GIAEMgYIARAjGCcyBggCECMYJzIHCAMQABiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCTE2Mjg3ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+https://link.springer.com/article/10.1007/s11042-024-19864-8
+
+https://scholar.google.co.in/scholar?q=melanoma+skin+cancer+detection+using+deep+learning+pdf&hl=en&as_sdt=0&as_vis=1&oi=scholart
+
+https://hal.science/hal-03172718/document
+
+https://ieeexplore.ieee.org/document/9263118
+
+https://sci-hub.se/10.1109/ICACSIS51025.2020.9263118
+
+https://www.sciencedirect.com/science/article/pii/S1877050924009438
+
+https://www.researchgate.net/publication/368911791_Skin_Cancer_Prediction_using_Deep_Learning
+
+https://jenci.springeropen.com/articles/10.1186/s43046-024-00210-w
+
+https://ieeexplore.ieee.org/document/9631047
+
+https://www.sciencedirect.com/science/article/pii/S1877050924009633?ref=pdf_download&fr=RR-2&rr=8f989c937e499a90
+
+https://www.geeksforgeeks.org/deploy-a-machine-learning-model-using-streamlit-library/
+
+https://www.google.com/search?num=10&sca_esv=6d51cb78c616c442&sxsrf=ADLYWIKi-1S0JGiy1NsyDDYOEWhVWJ5ZtA:1735413123405&q=melanoma+skin+cancer+system+architecture&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOa0K08TrPholP8ECM8ELoq5GeRrUvU44UjKtPgUX-2DV1UQVKIioKq9YP8hjr2s4XGUs7BYUWgrA1zGzjnSuLz0Rv9SOxJBYa2HuYoyuz0gUJ8I_0DE-GtDv_SDOIZzgEUF8lIMmGKJCeFzaPcqEnsoKlWNMQ&sa=X&ved=2ahUKEwiHjInWlcuKAxUZbPUHHQ8OMUgQtKgLegQIExAB&biw=1366&bih=607&dpr=1#vhid=gFZaY1PclMUcLM&vssid=mosaic
+
+https://www.mdpi.com/2075-4418/13/21/3313
+
+https://www.researchgate.net/figure/Proposed-architecture-of-skin-lesion-detection-and-classification_fig1_325585109
+
+https://www.researchgate.net/figure/The-overall-design-of-the-proposed-system-for-melanoma-skin-cancer-detection_fig2_359299707
+
+https://www.semanticscholar.org/paper/An-intelligent-decision-support-system-for-skin-Tan-Zhang/4ee39164c6c7b4d5484b706e475cd7f5768e8d87/figure/0
+
+https://www.researchgate.net/figure/Proposed-Architecture-for-Multi-class-Skin-Cancer-Classification_fig2_343428776
 
